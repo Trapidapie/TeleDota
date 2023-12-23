@@ -4,26 +4,18 @@ from aiogram.filters import Command
 import asyncio
 import logging
 
+from core.handlers.hero import send_hero_link
 from core.middlewareas.settings import settings
-from core.handlers.basic import get_start, get_photo, get_hello
-
-async def start_bot(bot: Bot):
-    await bot.send_message(settings.bots.admin_id, 'Hello, world!')
-
-async def stop_bot(bot: Bot):
-    await bot.send_message(settings.bots.admin_id, text='Bye, world!')
+from core.handlers.basic import start_com
+from core.middlewareas.libary import query_name
 
 async def start():
     bot = Bot(token=settings.bots.bot_token, parse_mode='HTML')
 
     dp = Dispatcher()
 
-    dp.startup.register(start_bot)
-    dp.shutdown.register(stop_bot)
-    dp.message.register(get_photo, F.photo)
-    dp.message.register(get_hello, F.text == "start")
-    dp.message.register(get_start, Command('start'))
-
+    dp.message.register(start_com, Command('start'))
+    dp.message.register(send_hero_link, Command(*query_name))
     try:
         await dp.start_polling(bot)
     finally:
