@@ -22,26 +22,26 @@
     "dark-seer": [],
     "dark-willow": [],
     "dawnbreaker": {
-        "PERCEPTION OF THE FIRST LIGHT": {
-            "img": "dawnbreaker/perception_of_the_first_light_icon.png",
+        "perception of the first light": {
+            "img": "img/hero/sets/dawnbreaker/perception_of_the_first_light_icon.png",
             "price": 100,
             "availability": true,
             "type": "set"
         },
-        "STARLORN ADJUDICATOR": {
-            "img": "dawnbreaker/starlorn_adjudication_icon.png",
+        "starlorn adjudication": {
+            "img": "img/hero/sets/dawnbreaker/starlorn_adjudication_icon.png",
             "price": 120,
             "availability": true,
             "type": "set"
         },
-        "DYING LIGHT": {
-            "img": "dawnbreaker/dying_light_icon.png",
+        "dying light": {
+            "img": "img/hero/sets/dawnbreaker/dying_light_icon.png",
             "price": 130,
             "availability": true,
             "type": "set"
         },
-        "ASTRAL HERALD": {
-            "img": "dawnbreaker/ч.png",
+        "astral herald": {
+            "img": "img/hero/sets/dawnbreaker/astral_herald_icon.png",
             "price": 130,
             "availability": true,
             "type": "set"
