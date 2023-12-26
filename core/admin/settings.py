@@ -1,6 +1,8 @@
 from environs import Env
 from dataclasses import dataclass
 
+# Датаклассы мюда лучше не лезаить
+
 
 @dataclass
 class Bots:

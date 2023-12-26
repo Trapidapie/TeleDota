@@ -4,6 +4,8 @@ from aiogram.types import Message
 from core.keyboards.key import main_kb
 from core.utils.command import set_commands
 
+# ТОЛЬКО ОСНОВНЫЕ КОМАНДЫ
+
 async def start_com(message: Message, bot: Bot):
     await set_commands(bot)
     await message.answer("Привіт це для покупок есклюзивних товарів по грі дота 2,"

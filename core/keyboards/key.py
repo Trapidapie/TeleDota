@@ -5,7 +5,10 @@ from aiogram.types import (
     ReplyKeyboardMarkup,
 )
 
-from core.middlewareas.libary import dota2_heroes_dict
+from core.middlewareas.libary import heroes_dict
+
+
+# КНОПКИ И ВСЕ ЧТО С НИМИМ СВЯЗАНО
 
 main_kb = ReplyKeyboardMarkup(
     keyboard=[
@@ -42,5 +45,5 @@ back = ReplyKeyboardMarkup(
     ]
 )
 
-for name_hero in dota2_heroes_dict:
+for name_hero in heroes_dict:
     catalog_kb.keyboard.append([])
