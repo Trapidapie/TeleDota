@@ -4,7 +4,7 @@
 heroes_dict = {
     "abaddon": ["abaddon"],
     "alchemist": ["alchemist"],
-    "ancient-apparition": ["ancient-apparition", "apparition"],
+    "ancient-apparition": ["ancient-apparition", "apparition", "aa", "ancient"],
     "anti-mage": ["anti-mage", "am"],
     "arc-warden": ["arc-warden", "arc", "warden"],
     "axe": ["axe"],
@@ -139,23 +139,57 @@ all_values = list(set(query_name))
 # Словарь скинов для каждого героя и нфа про них
 skins = {
     "abaddon": {
-        "endles night": {
+        "endless night": {
             "img": "img/hero/sets/abaddon/endless_night_icon.png",
             "price": 100,
+            "rarity": "rare",
             "availability": True,
             "type": "set"
         },
         "Mace of the Chosen": {
             "img": "img/hero/sets/abaddon/mace_of_the_chosen_icon.png",
             "price": 120,
+            "rarity": "rare",
             "availability": True,
             "type": "weapon"
         },
     },
-    "alchemist": [],
-    "ancient-apparition": [],
-    "anti-mage": [],
-    "arc-warden": [],
+    "alchemist": {
+        "Lumpo and Rupertus": {
+            "img": "img/hero/sets/alchemist/lumpo_and_rupertus_icon.png",
+            "price": 100,
+            "rarity": "rare",
+            "availability": True,
+            "type": "set"
+        },
+    },
+    "ancient-apparition": {
+        "Secrets of the Frost Singularity": {
+            "img": "img/hero/sets/ancient-apparition/secrets_of_the_frost_singularity_icon.png",
+            "price": 100,
+            "rarity": "rare",
+            "availability": True,
+            "type": "set"
+        },
+    },
+    "anti-mage": {
+        "Brands if the Reaper": {
+            "img": "img/hero/sets/anti-mage/brands_of_the_reaper_icon.png",
+            "price": 100,
+            "rarity": "rare",
+            "availability": True,
+            "type": "set"
+        },
+    },
+    "arc-warden": {
+        "Ire of the Ancient Gaoler": {
+            "img": "img/hero/sets/arc-warden/ire_of_the_ancient_gaoler_icon.png",
+            "price": 100,
+            "rarity": "rare",
+            "availability": True,
+            "type": "set"
+        },
+    },
     "axe": [],
     "bane": [],
     "batrider": [],
@@ -177,24 +211,28 @@ skins = {
         "perception of the first light": {
             "img": "img/hero/sets/dawnbreaker/perception_of_the_first_light_icon.png",
             "price": 100,
+            "rarity": "rare",
             "availability": True,
             "type": "set"
         },
         "starlorn adjudication": {
             "img": "img/hero/sets/dawnbreaker/starlorn_adjudication_icon.png",
             "price": 120,
+            "rarity": "rare",
             "availability": True,
             "type": "set"
         },
         "dying light": {
             "img": "img/hero/sets/dawnbreaker/dying_light_icon.png",
             "price": 130,
+            "rarity": "rare",
             "availability": True,
             "type": "set"
         },
         "astral herald": {
             "img": "img/hero/sets/dawnbreaker/astral_herald_icon.png",
             "price": 130,
+            "rarity": "rare",
             "availability": False,
             "type": "set"
         }

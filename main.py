@@ -1,5 +1,6 @@
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command
+from aiogram.types import ContentType
 import asyncio
 
 from core.utils.command import send_hero_link
@@ -8,7 +9,7 @@ from core.handlers.basic import start_com, main_menu
 from core.utils.command import faq, helps, catalog
 from core.middlewareas.libary import query_name
 from core.handlers.callback import send_skin_link
-
+from core.handlers.pay import order, pre_checkout_q, successful_payment
 
 # майндатпай все понятно
 
@@ -24,6 +25,9 @@ async def start():
     dp.message.register(faq, F.text[:-1].lower() == 'faq')
     dp.message.register(helps, Command('help'))
     dp.message.register(catalog, F.text[:-1].lower() == 'каталог')
+    dp.message.register(order, Command('pay'))
+    dp.pre_checkout_query.register(pre_checkout_q)
+    dp.message.register(successful_payment, F(content_types=[ContentType.SUCCESSFUL_PAYMENT]))
 
     try:
         await dp.start_polling(bot)
