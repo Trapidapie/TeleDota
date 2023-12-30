@@ -2,19 +2,21 @@ from aiogram import Bot
 from aiogram.types import Message, LabeledPrice, pre_checkout_query
 
 from core.admin.settings import settings
+from core.utils.command import send_hero_link
 
-async def order(message: Message, bot: Bot):
+async def order(message: Message, bot: Bot, hero: str, item: str, price: int):
     await bot.send_invoice(
         chat_id=message.chat.id,
-        title="Покупка",
-        description="Описание",
-        payload="payload",
+        title=item.capitalize().replace('_', ' '),
+        description=f"{item.capitalize().replace('_', ' ')} skin for \
+        {hero.capitalize().replace('-', ' ')}",
+        payload=item.capitalize().replace('_', ' '),
         provider_token=settings.bots.provider_token,
         currency='usd',
         prices=[
             LabeledPrice(
-                label='Товар',
-                amount=100
+                label=item.capitalize().replace('_', ' '),
+                amount=price
             ),
         ],
         max_tip_amount=500,  # Increased to cover all suggested tip amounts

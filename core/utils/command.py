@@ -20,7 +20,7 @@ async def send_hero_link(message: Message, bot: Bot):
     hero = find_key_by_value(heroes_dict, message.text)
     for skin in skins[hero]:
         inline_kb_full = InlineKeyboardMarkup(inline_keyboard=[[
-            InlineKeyboardButton(text="Купить", callback_data=f"skin_{hero}")
+            InlineKeyboardButton(text="Купить", callback_data=f"skin_{hero}_{skin}_{skins[hero][skin]['price']}"),
         ]])
         item = Skin(hero, f'img/hero/sets/{hero}/{skin.lower().replace(' ', '_')}_icon.png', skins[hero][skin]["price"],
                     skins[hero][skin]["rarity"], skins[hero][skin]["availability"], skins[hero][skin]["type"])

@@ -25,7 +25,6 @@ async def start():
     dp.message.register(faq, F.text[:-1].lower() == 'faq')
     dp.message.register(helps, Command('help'))
     dp.message.register(catalog, F.text[:-1].lower() == 'каталог')
-    dp.message.register(order, Command('pay'))
     dp.pre_checkout_query.register(pre_checkout_q)
     dp.message.register(successful_payment, F(content_types=[ContentType.SUCCESSFUL_PAYMENT]))
 
